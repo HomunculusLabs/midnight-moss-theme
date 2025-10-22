@@ -63,15 +63,15 @@ package() {
     
     # === ITERM2 ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/iterm2"
-    install -Dm644 "iterm2/Midnight Moss.itermcolors" \
-        "${pkgdir}/usr/share/themes/midnight-moss/iterm2/Midnight Moss.itermcolors"
+    install -Dm644 iterm2/midnight-moss.itermcolors \
+        "${pkgdir}/usr/share/themes/midnight-moss/iterm2/midnight-moss.itermcolors"
     install -Dm644 iterm2/README.md \
         "${pkgdir}/usr/share/doc/midnight-moss/iterm2-README.md"
-    
+
     # === JETBRAINS ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/jetbrains"
-    install -Dm644 jetbrains/Midnight_Moss.icls \
-        "${pkgdir}/usr/share/themes/midnight-moss/jetbrains/Midnight_Moss.icls"
+    install -Dm644 jetbrains/midnight-moss.icls \
+        "${pkgdir}/usr/share/themes/midnight-moss/jetbrains/midnight-moss.icls"
     install -Dm644 jetbrains/README.md \
         "${pkgdir}/usr/share/doc/midnight-moss/jetbrains-README.md"
     
@@ -79,11 +79,15 @@ package() {
     install -d "${pkgdir}/usr/share/themes/midnight-moss/kitty"
     install -Dm644 kitty/midnight-moss.conf \
         "${pkgdir}/usr/share/themes/midnight-moss/kitty/midnight-moss.conf"
+    install -Dm644 kitty/README.md \
+        "${pkgdir}/usr/share/doc/midnight-moss/kitty-README.md"
     
     # === NEOVIM ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/neovim"
     install -Dm644 neovim/midnight-moss.lua \
         "${pkgdir}/usr/share/themes/midnight-moss/neovim/midnight-moss.lua"
+    install -Dm644 neovim/README.md \
+        "${pkgdir}/usr/share/doc/midnight-moss/neovim-README.md"
     
     # === OBSIDIAN ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/obsidian"
@@ -98,11 +102,13 @@ package() {
     install -d "${pkgdir}/usr/share/themes/midnight-moss/starship"
     install -Dm644 starship/starship.toml \
         "${pkgdir}/usr/share/themes/midnight-moss/starship/starship.toml"
+    install -Dm644 starship/README.md \
+        "${pkgdir}/usr/share/doc/midnight-moss/starship-README.md"
     
     # === SUBLIME TEXT ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/sublime-text"
-    install -Dm644 "sublime-text/Midnight Moss.sublime-color-scheme" \
-        "${pkgdir}/usr/share/themes/midnight-moss/sublime-text/Midnight Moss.sublime-color-scheme"
+    install -Dm644 sublime-text/midnight-moss.sublime-color-scheme \
+        "${pkgdir}/usr/share/themes/midnight-moss/sublime-text/midnight-moss.sublime-color-scheme"
     install -Dm644 sublime-text/README.md \
         "${pkgdir}/usr/share/doc/midnight-moss/sublime-text-README.md"
     
@@ -131,6 +137,8 @@ package() {
     install -d "${pkgdir}/usr/share/themes/midnight-moss/zellij"
     install -Dm644 zellij/config.kdl \
         "${pkgdir}/usr/share/themes/midnight-moss/zellij/config.kdl"
+    install -Dm644 zellij/README.md \
+        "${pkgdir}/usr/share/doc/midnight-moss/zellij-README.md"
     
     # === ZSH ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/zsh"
