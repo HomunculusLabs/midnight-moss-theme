@@ -1,0 +1,17 @@
+# Midnight Moss Theme - GitHub Pages Configuration
+
+# Site settings
+title: Midnight Moss
+description: A dark theme collection for developers who demand consistency
+url: "https://homunculuslabs.github.io"
+baseurl: "/midnight-moss-theme"
+
+# Theme settings
+theme: null
+
+# Build settings
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
