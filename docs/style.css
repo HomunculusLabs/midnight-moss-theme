@@ -1,7 +1,7 @@
 /* Midnight Moss Theme - Landing Page */
 
 :root {
-    /* Backgrounds */
+    /* Dark Mode - Backgrounds */
     --deep-night: #1c1c1c;
     --shadow: #262626;
     --charcoal: #303030;
@@ -9,7 +9,7 @@
     --stone: #444444;
     --ash: #525252;
 
-    /* Accents */
+    /* Accents (same in both modes) */
     --moss: #5e8d87;
     --moss-light: #6b9d96;
     --sage: #6b9d96;
@@ -19,10 +19,26 @@
     --wine: #c17a7a;
     --copper: #b8886b;
 
-    /* Text */
+    /* Dark Mode - Text */
     --moonlight: #b8b8b8;
     --silver: #c8c8c8;
     --mist: #7a7a7a;
+}
+
+/* Light Mode */
+[data-theme="light"] {
+    /* Light Mode - Backgrounds */
+    --deep-night: #f5f5f5;
+    --shadow: #ffffff;
+    --charcoal: #fafafa;
+    --slate: #e8e8e8;
+    --stone: #d4d4d4;
+    --ash: #c0c0c0;
+
+    /* Light Mode - Text */
+    --moonlight: #404040;
+    --silver: #2a2a2a;
+    --mist: #6a6a6a;
 }
 
 * {
@@ -37,6 +53,7 @@ body {
     color: var(--moonlight);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code, pre {
@@ -59,6 +76,11 @@ code, pre {
     pointer-events: none;
     z-index: -1;
     background: linear-gradient(180deg, var(--deep-night) 0%, #0f0f0f 100%);
+    transition: background 0.3s ease;
+}
+
+[data-theme="light"] .stars {
+    background: linear-gradient(180deg, var(--deep-night) 0%, #e8e8e8 100%);
 }
 
 .stars::before,
@@ -582,4 +604,96 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--moss-light);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background: var(--shadow);
+    border: 2px solid var(--slate);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:hover {
+    border-color: var(--moss);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(94, 141, 135, 0.4);
+}
+
+.theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--moss);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    fill: var(--moss-light);
+}
+
+/* Hide/show sun/moon icons based on theme */
+[data-theme="dark"] .sun-icon {
+    display: none;
+}
+
+[data-theme="light"] .moon-icon {
+    display: none;
+}
+
+/* Light mode specific adjustments */
+[data-theme="light"] .hero {
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.8) 0%, rgba(245, 245, 245, 0) 100%);
+}
+
+[data-theme="light"] .features {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, transparent 100%);
+}
+
+[data-theme="light"] .code-preview {
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+[data-theme="light"] .installation {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+}
+
+[data-theme="light"] .editor-window {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .color-swatch {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .theme-toggle {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    box-shadow: 0 6px 20px rgba(94, 141, 135, 0.3);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
 }

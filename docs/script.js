@@ -1,10 +1,38 @@
 // Midnight Moss Theme - Interactive Features
 
 document.addEventListener('DOMContentLoaded', () => {
+    initThemeToggle();
     initColorPalette();
     initSmoothScroll();
     initScrollAnimations();
 });
+
+/**
+ * Theme Toggle - Switch between light and dark modes
+ */
+function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', currentTheme);
+
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        // Add a subtle animation
+        themeToggle.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+            themeToggle.style.transform = '';
+        }, 300);
+    });
+}
 
 /**
  * Color Palette Copy to Clipboard
