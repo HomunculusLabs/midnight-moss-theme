@@ -5,14 +5,14 @@ Dark organic theme for IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, RubyMine, and
 ## Installation
 
 ### Method 1: Import Color Scheme File
-1. Download `Midnight_Moss.icls`
+1. Download `midnight-moss.icls`
 2. In your IDE, go to **Settings** → **Editor** → **Color Scheme**
 3. Click the gear icon → **Import Scheme** → **IntelliJ IDEA color scheme (.icls)**
 4. Select the downloaded file and click **OK**
 5. Choose "Midnight Moss" from the scheme dropdown
 
 ### Method 2: Manual Installation
-1. Copy `Midnight_Moss.icls` to your IDE's color schemes directory:
+1. Copy `midnight-moss.icls` to your IDE's color schemes directory:
    - **Windows**: `%USERPROFILE%\.IntelliJIdea{version}\config\colors\`
    - **macOS**: `~/Library/Application Support/JetBrains/{IDE}{version}/colors/`
    - **Linux**: `~/.config/JetBrains/{IDE}{version}/colors/`

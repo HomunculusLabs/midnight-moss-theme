@@ -64,6 +64,24 @@ Midnight Moss is a carefully crafted dark theme that brings together the deep tr
 
 ## 📦 Installation
 
+### Automated Installation (Recommended)
+
+The easiest way to install Midnight Moss themes across your entire system:
+
+```bash
+# Clone the repository
+git clone https://github.com/babywizzies/midnight-moss-theme.git
+cd midnight-moss-theme/dotfiles
+
+# Run the automated installer
+./install.sh
+
+# Or install specific applications
+./install.sh -t alacritty,vim,tmux,neovim
+```
+
+See [dotfiles/README.md](dotfiles/README.md) for advanced installation options, backup management, and uninstallation.
+
 ### Package Managers
 
 #### Arch Linux (AUR)
@@ -71,7 +89,7 @@ Midnight Moss is a carefully crafted dark theme that brings together the deep tr
 # Using yay
 yay -S midnight-moss-themes
 
-# Using paru  
+# Using paru
 paru -S midnight-moss-themes
 ```
 
@@ -91,14 +109,14 @@ Download individual themes from the [releases page](https://github.com/babywizzi
 **Sublime Text**
 ```bash
 # Copy to User packages directory
-cp "sublime-text/Midnight Moss.sublime-color-scheme" ~/.config/sublime-text/Packages/User/
+cp sublime-text/midnight-moss.sublime-color-scheme ~/.config/sublime-text/Packages/User/
 # Select from Preferences → Color Scheme
 ```
 
 **JetBrains IDEs**
 ```bash
 # Import color scheme file
-# Settings → Editor → Color Scheme → Import → Midnight_Moss.icls
+# Settings → Editor → Color Scheme → Import → midnight-moss.icls
 ```
 
 **Vim/Neovim**
@@ -119,7 +137,7 @@ curl -o ~/.config/alacritty/themes/midnight-moss.toml https://raw.githubusercont
 
 **iTerm2**
 ```bash
-curl -o ~/Downloads/midnight-moss.itermcolors https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/iterm2/Midnight%20Moss.itermcolors
+curl -o ~/Downloads/midnight-moss.itermcolors https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/iterm2/midnight-moss.itermcolors
 # Double-click to import, then select in Preferences → Profiles → Colors
 ```
 
@@ -188,6 +206,8 @@ The theme uses a sophisticated gradient of grays as the foundation, with careful
 
 ## 🛠️ Development
 
+### Core Color Palette
+
 Want to port Midnight Moss to a new application? Here's the core palette:
 
 ```css
@@ -204,6 +224,32 @@ Want to port Midnight Moss to a new application? Here's the core palette:
   --mm-accent-error: #9b6a6c;
 }
 ```
+
+### Repository Structure
+
+- `/alacritty/` - Alacritty terminal themes (TOML & YAML)
+- `/arch-package/` - AUR package files
+- `/dotfiles/` - Automated installation and management scripts
+- `/firefox/` - Firefox userChrome themes
+- `/iterm2/` - iTerm2 color schemes
+- `/jetbrains/` - JetBrains IDE themes
+- `/kitty/` - Kitty terminal configuration
+- `/neovim/` - Neovim Lua colorscheme
+- `/obsidian/` - Obsidian theme
+- `/starship/` - Starship prompt configuration
+- `/sublime-text/` - Sublime Text color scheme
+- `/tmux/` - tmux configuration theme
+- `/vim/` - Vim colorscheme
+- `/vscode/` - VS Code theme
+- `/zellij/` - Zellij multiplexer theme
+- `/zsh/` - Zsh/Oh-My-Zsh theme
+
+### Automated Installation
+
+The `dotfiles/` directory contains installation scripts:
+- `install.sh` - Automated theme installer with backup support
+- `uninstall.sh` - Theme removal and backup restoration
+- See `dotfiles/README.md` for detailed documentation
 
 ## 🤝 Contributing
 

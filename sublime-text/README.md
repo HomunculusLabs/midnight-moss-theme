@@ -11,7 +11,7 @@ A dark, organic color scheme for Sublime Text with moss-inspired accents that cr
 4. Search for "Midnight Moss" (when available on Package Control)
 
 ### Method 2: Manual Installation
-1. Download `Midnight Moss.sublime-color-scheme`
+1. Download `midnight-moss.sublime-color-scheme`
 2. Open Sublime Text and go to **Preferences** → **Browse Packages**
 3. Create a `User` folder if it doesn't exist
 4. Copy the `.sublime-color-scheme` file to the `User` folder

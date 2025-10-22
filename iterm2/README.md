@@ -4,7 +4,7 @@ A dark terminal theme with organic moss-inspired colors for iTerm2.
 
 ## Installation
 
-1. Download `Midnight Moss.itermcolors`
+1. Download `midnight-moss.itermcolors`
 2. Double-click the file to import it into iTerm2
 3. Go to Preferences → Profiles → Colors
 4. Select "Midnight Moss" from the Color Presets dropdown
