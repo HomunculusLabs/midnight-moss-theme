@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Root-level `install.sh` script for simplified omarchy base installation
+- Comprehensive `Makefile` with convenient installation targets:
+  - `make install` - Interactive installation
+  - `make install-all` - Install all themes
+  - `make install-terminals`, `install-editors`, `install-tools` - Category-based installation
+  - `make test` - Dry-run preview
+  - `make check-files` - Validate repository structure
+- Comprehensive `INSTALL.md` guide with:
+  - Platform-specific instructions (Linux, macOS, WSL)
+  - Application-specific installation steps
+  - Troubleshooting section
+  - Backup and uninstallation procedures
 - Complete documentation (README.md) for kitty terminal emulator
 - Complete documentation (README.md) for neovim colorscheme
 - Complete documentation (README.md) for starship prompt theme
@@ -17,6 +29,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dotfiles integration scripts for easy deployment
 
 ### Changed
+- Updated `arch-package/PKGBUILD` to match actual theme filenames
+- Enhanced `README.md` with improved installation section:
+  - Added quick start guide
+  - Added Makefile usage examples
+  - Added reference to comprehensive INSTALL.md
 - Standardized all theme filenames to use hyphen notation (midnight-moss.*)
   - `Midnight Moss.itermcolors` → `midnight-moss.itermcolors`
   - `Midnight_Moss.icls` → `midnight-moss.icls`
@@ -27,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved repository organization and structure
 
 ### Fixed
+- PKGBUILD file references to theme files (now matches actual filenames)
 - Inconsistent filename conventions across theme files
 - Broken documentation links in README files
 - Obsidian directory containing unrelated themes

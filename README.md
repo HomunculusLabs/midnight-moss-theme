@@ -64,23 +64,39 @@ Midnight Moss is a carefully crafted dark theme that brings together the deep tr
 
 ## 📦 Installation
 
-### Automated Installation (Recommended)
+### Quick Start (Recommended)
 
 The easiest way to install Midnight Moss themes across your entire system:
 
 ```bash
 # Clone the repository
 git clone https://github.com/babywizzies/midnight-moss-theme.git
-cd midnight-moss-theme/dotfiles
+cd midnight-moss-theme
 
 # Run the automated installer
 ./install.sh
 
-# Or install specific applications
-./install.sh -t alacritty,vim,tmux,neovim
+# Or use make for common installation patterns
+make install              # Interactive installation
+make install-all          # Install everything
+make install-terminals    # Terminal emulators only
+make install-editors      # Code editors only
+make install-tools        # Terminal tools only
 ```
 
-See [dotfiles/README.md](dotfiles/README.md) for advanced installation options, backup management, and uninstallation.
+For targeted installation:
+```bash
+# Install specific applications
+./install.sh -t alacritty,vim,tmux,neovim
+
+# Or using make
+make install TARGETS=vim,tmux,zsh
+
+# Preview what would be installed (dry-run)
+make test
+```
+
+See [INSTALL.md](INSTALL.md) for comprehensive installation guide, including platform-specific instructions, troubleshooting, and advanced options.
 
 ### Package Managers
 
