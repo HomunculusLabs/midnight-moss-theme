@@ -63,15 +63,15 @@ package() {
     
     # === ITERM2 ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/iterm2"
-    install -Dm644 "iterm2/Midnight Moss.itermcolors" \
-        "${pkgdir}/usr/share/themes/midnight-moss/iterm2/Midnight Moss.itermcolors"
+    install -Dm644 iterm2/midnight-moss.itermcolors \
+        "${pkgdir}/usr/share/themes/midnight-moss/iterm2/midnight-moss.itermcolors"
     install -Dm644 iterm2/README.md \
         "${pkgdir}/usr/share/doc/midnight-moss/iterm2-README.md"
     
     # === JETBRAINS ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/jetbrains"
-    install -Dm644 jetbrains/Midnight_Moss.icls \
-        "${pkgdir}/usr/share/themes/midnight-moss/jetbrains/Midnight_Moss.icls"
+    install -Dm644 jetbrains/midnight-moss.icls \
+        "${pkgdir}/usr/share/themes/midnight-moss/jetbrains/midnight-moss.icls"
     install -Dm644 jetbrains/README.md \
         "${pkgdir}/usr/share/doc/midnight-moss/jetbrains-README.md"
     
@@ -101,8 +101,8 @@ package() {
     
     # === SUBLIME TEXT ===
     install -d "${pkgdir}/usr/share/themes/midnight-moss/sublime-text"
-    install -Dm644 "sublime-text/Midnight Moss.sublime-color-scheme" \
-        "${pkgdir}/usr/share/themes/midnight-moss/sublime-text/Midnight Moss.sublime-color-scheme"
+    install -Dm644 sublime-text/midnight-moss.sublime-color-scheme \
+        "${pkgdir}/usr/share/themes/midnight-moss/sublime-text/midnight-moss.sublime-color-scheme"
     install -Dm644 sublime-text/README.md \
         "${pkgdir}/usr/share/doc/midnight-moss/sublime-text-README.md"
     
