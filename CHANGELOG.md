@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- VS Code Marketplace packaging (`vscode/package.json`) for publishing to VS Code extensions
+- JetBrains Marketplace plugin packaging (`jetbrains/META-INF/plugin.xml`, Gradle build)
+- Homebrew formula (`homebrew/midnight-moss-themes.rb`) for macOS installation
 - Root-level `install.sh` script for simplified omarchy base installation
 - Comprehensive `Makefile` with convenient installation targets:
   - `make install` - Interactive installation

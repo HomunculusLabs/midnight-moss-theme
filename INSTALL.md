@@ -85,7 +85,22 @@ make install TARGETS=vim,tmux,alacritty
 make test
 ```
 
-### Method 3: Arch Linux Package
+### Method 3: Homebrew (macOS)
+
+For macOS users, install via Homebrew:
+
+```bash
+# Install from formula (once tap is available)
+brew tap homunculuslabs/themes
+brew install midnight-moss-themes
+
+# Or install directly from the formula URL
+brew install --formula https://raw.githubusercontent.com/HomunculusLabs/midnight-moss-theme/main/homebrew/midnight-moss-themes.rb
+```
+
+After installation, themes are available in `$(brew --prefix)/share/`. Run `brew info midnight-moss-themes` for setup instructions.
+
+### Method 4: Arch Linux Package
 
 For Arch Linux users, install via AUR:
 
@@ -103,7 +118,7 @@ makepkg -si
 
 After package installation, themes are available in `/usr/share/themes/midnight-moss/`.
 
-### Method 4: Manual Installation
+### Method 5: Manual Installation
 
 For individual application setup, see [Application-Specific Installation](#application-specific-installation) below.
 
@@ -211,9 +226,17 @@ vim.cmd('colorscheme midnight-moss')
 #### VS Code
 
 ```bash
-# Manual installation recommended
-# 1. Copy vscode/midnight-moss-theme.json to VS Code extensions folder
-# 2. Or search for "Midnight Moss" in VS Code marketplace (when published)
+# Method 1: VS Code Marketplace (Recommended)
+# 1. Open VS Code Extensions (Ctrl+Shift+X / Cmd+Shift+X)
+# 2. Search for "Midnight Moss"
+# 3. Click Install
+
+# Method 2: Install from VSIX
+# 1. Download .vsix from releases
+# 2. Extensions → ... menu → "Install from VSIX..."
+
+# Method 3: Manual
+# Copy entire vscode/ folder to ~/.vscode/extensions/midnight-moss-theme/
 ```
 
 #### Sublime Text
@@ -229,12 +252,19 @@ cp sublime-text/midnight-moss.sublime-color-scheme \
 #### JetBrains IDEs
 
 ```bash
-# Manual
-# 1. Open your JetBrains IDE
-# 2. Go to Settings → Editor → Color Scheme
-# 3. Click gear icon → Import Scheme
-# 4. Select jetbrains/midnight-moss.icls
-# 5. Apply the "Midnight Moss" theme
+# Method 1: JetBrains Marketplace (Recommended)
+# 1. Settings → Plugins → Marketplace
+# 2. Search for "Midnight Moss"
+# 3. Click Install and restart
+
+# Method 2: Install from Disk
+# 1. Download .jar plugin from releases
+# 2. Settings → Plugins → gear icon → "Install Plugin from Disk..."
+
+# Method 3: Import Color Scheme
+# 1. Settings → Editor → Color Scheme
+# 2. Click gear icon → Import Scheme
+# 3. Select jetbrains/midnight-moss.icls
 ```
 
 ### Terminal Tools

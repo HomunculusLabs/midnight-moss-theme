@@ -100,6 +100,12 @@ See [INSTALL.md](INSTALL.md) for comprehensive installation guide, including pla
 
 ### Package Managers
 
+#### Homebrew (macOS)
+```bash
+brew tap homunculuslabs/themes
+brew install midnight-moss-themes
+```
+
 #### Arch Linux (AUR)
 ```bash
 # Using yay
@@ -109,8 +115,17 @@ yay -S midnight-moss-themes
 paru -S midnight-moss-themes
 ```
 
+#### VS Code Marketplace
+Search "Midnight Moss" in VS Code Extensions, or run:
+```bash
+code --install-extension homunculuslabs.midnight-moss-theme
+```
+
+#### JetBrains Marketplace
+Search "Midnight Moss" in Settings → Plugins → Marketplace
+
 #### Manual Download
-Download individual themes from the [releases page](https://github.com/babywizzies/midnight-moss-theme/releases) or browse the source code.
+Download individual themes from the [releases page](https://github.com/HomunculusLabs/midnight-moss-theme/releases) or browse the source code.
 
 ### Quick Setup
 

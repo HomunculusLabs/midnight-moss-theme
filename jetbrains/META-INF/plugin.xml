@@ -1,0 +1,53 @@
+<idea-plugin>
+    <id>com.homunculuslabs.midnight-moss-theme</id>
+    <name>Midnight Moss Theme</name>
+    <version>1.0.0</version>
+    <vendor email="support@homunculuslabs.com" url="https://github.com/HomunculusLabs/midnight-moss-theme">
+        HomunculusLabs
+    </vendor>
+
+    <description><![CDATA[
+    <h2>Midnight Moss - A Dark Organic Theme</h2>
+    <p>A carefully crafted dark theme that brings together the deep tranquility of midnight with the organic vitality of moss. Born from a terminal rice configuration, this theme offers a sophisticated palette that's easy on the eyes during those long coding sessions.</p>
+
+    <h3>Features</h3>
+    <ul>
+        <li>Deep, comfortable dark background (#1c1c1c)</li>
+        <li>Organic moss-inspired accent colors (#5e8d87)</li>
+        <li>Optimized contrast ratios for extended use</li>
+        <li>Comprehensive syntax highlighting for all languages</li>
+        <li>Consistent styling across all IDE panels</li>
+    </ul>
+
+    <h3>Color Palette</h3>
+    <ul>
+        <li><b>Moss</b> (#5e8d87) - Primary accent</li>
+        <li><b>Forest</b> (#6e8f7c) - Classes, types</li>
+        <li><b>Ocean</b> (#5d7e97) - Functions</li>
+        <li><b>Sage</b> (#826d94) - Keywords</li>
+        <li><b>Amber</b> (#a09262) - Strings</li>
+        <li><b>Wine</b> (#9b6a6c) - Errors</li>
+    </ul>
+
+    <p>Part of the <a href="https://github.com/HomunculusLabs/midnight-moss-theme">Midnight Moss Theme</a> collection, available for 15+ applications including VS Code, Vim, Neovim, Alacritty, tmux, and more.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+    <h3>1.0.0</h3>
+    <ul>
+        <li>Initial release</li>
+        <li>Complete editor color scheme</li>
+        <li>Syntax highlighting for all major languages</li>
+        <li>Diff and VCS colors</li>
+        <li>Debugger highlighting</li>
+    </ul>
+    ]]></change-notes>
+
+    <idea-version since-build="203.0"/>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <bundledColorScheme path="/colors/midnight-moss"/>
+    </extensions>
+</idea-plugin>
