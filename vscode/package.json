@@ -1,0 +1,56 @@
+{
+  "name": "midnight-moss-theme",
+  "displayName": "Midnight Moss Theme",
+  "description": "A dark, organic color theme with mossy green-teal accents for developers who love the night",
+  "version": "1.0.0",
+  "publisher": "homunculuslabs",
+  "author": {
+    "name": "HomunculusLabs"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1c1c1c",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "moss",
+    "green",
+    "organic",
+    "midnight",
+    "color theme",
+    "syntax highlighting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HomunculusLabs/midnight-moss-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/HomunculusLabs/midnight-moss-theme/issues"
+  },
+  "homepage": "https://github.com/HomunculusLabs/midnight-moss-theme#readme",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Midnight Moss",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-moss-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^2.22.0"
+  }
+}
