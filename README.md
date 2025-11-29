@@ -1,245 +1,123 @@
-# 🌿 Midnight Moss
+# Midnight Moss
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-5e8d87.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-5e8d87.svg)](CHANGELOG.md)
+[![Platforms](https://img.shields.io/badge/platforms-15%2B%20apps-5e8d87.svg)](#supported-applications)
 
 > A dark, organic color theme with mossy green-teal accents for developers who love the night
 
-Midnight Moss is a carefully crafted dark theme that brings together the deep tranquility of midnight with the organic vitality of moss. Born from a terminal rice configuration, this theme offers a sophisticated palette that's easy on the eyes during those long coding sessions.
+Midnight Moss brings together the deep tranquility of midnight with organic moss-inspired accents. Born from a terminal rice configuration, this theme offers a sophisticated palette that's easy on the eyes during long coding sessions.
 
-## 🎨 Color Palette
+## Color Palette
+
+| | Color | Hex | Usage |
+|---|-------|-----|-------|
+| ![#1c1c1c](https://via.placeholder.com/16/1c1c1c/1c1c1c.png) | Deep Night | `#1c1c1c` | Primary background |
+| ![#262626](https://via.placeholder.com/16/262626/262626.png) | Shadow | `#262626` | Secondary background |
+| ![#5e8d87](https://via.placeholder.com/16/5e8d87/5e8d87.png) | **Moss** | `#5e8d87` | Primary accent |
+| ![#6e8f7c](https://via.placeholder.com/16/6e8f7c/6e8f7c.png) | Forest | `#6e8f7c` | Success, classes |
+| ![#5d7e97](https://via.placeholder.com/16/5d7e97/5d7e97.png) | Ocean | `#5d7e97` | Functions, info |
+| ![#826d94](https://via.placeholder.com/16/826d94/826d94.png) | Sage | `#826d94` | Keywords |
+| ![#a09262](https://via.placeholder.com/16/a09262/a09262.png) | Amber | `#a09262` | Strings |
+| ![#9b6a6c](https://via.placeholder.com/16/9b6a6c/9b6a6c.png) | Wine | `#9b6a6c` | Errors |
+| ![#b8b8b8](https://via.placeholder.com/16/b8b8b8/b8b8b8.png) | Moonlight | `#b8b8b8` | Primary text |
+
+<details>
+<summary>Full palette (16 colors)</summary>
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| **Deep Night** | `#1c1c1c` | Primary background |
-| **Shadow** | `#262626` | Secondary background |
-| **Charcoal** | `#2e2e2e` | Tertiary background |
-| **Slate** | `#3a3a3a` | UI elements |
-| **Stone** | `#464646` | Borders, dividers |
-| **Ash** | `#525252` | Subtle highlights |
-| **Moonlight** | `#b8b8b8` | Primary text |
-| **Silver** | `#c8c8c8` | Bright text |
-| **Mist** | `#7a7a7a` | Muted text |
-| **Moss** | `#5e8d87` | Primary accent (links, selection) |
-| **Forest** | `#6e8f7c` | Success, growth |
-| **Ocean** | `#5d7e97` | Information, functions |
-| **Wine** | `#9b6a6c` | Errors, warnings |
-| **Sage** | `#826d94` | Keywords, special |
-| **Amber** | `#a09262` | Strings, constants |
-| **Copper** | `#9d7a5a` | Tags, metadata |
+| Deep Night | `#1c1c1c` | Primary background |
+| Shadow | `#262626` | Secondary background |
+| Charcoal | `#2e2e2e` | Tertiary background |
+| Slate | `#3a3a3a` | UI elements |
+| Stone | `#464646` | Borders, dividers |
+| Ash | `#525252` | Subtle highlights |
+| Mist | `#7a7a7a` | Muted text, comments |
+| Moonlight | `#b8b8b8` | Primary text |
+| Silver | `#c8c8c8` | Bright text |
+| Moss | `#5e8d87` | Primary accent |
+| Forest | `#6e8f7c` | Success, classes |
+| Ocean | `#5d7e97` | Functions, info |
+| Wine | `#9b6a6c` | Errors |
+| Sage | `#826d94` | Keywords |
+| Amber | `#a09262` | Strings |
+| Copper | `#9d7a5a` | Constants, tags |
 
-## 🚀 Available For
+</details>
 
-### ✅ Currently Available
-
-#### **Code Editors & IDEs**
-- [VS Code](#vs-code) - Comprehensive editor theme with syntax highlighting
-- [Sublime Text](#sublime-text) - Modern JSON color scheme format
-- [JetBrains IDEs](#jetbrains) - IntelliJ IDEA, PyCharm, WebStorm, etc.
-- [Vim](#vim) - Classic text editor colorscheme
-- [Neovim](#neovim) - Modern Lua-based colorscheme
-
-#### **Terminal Emulators**
-- [Alacritty](#alacritty) - Modern GPU-accelerated terminal (TOML + YAML)
-- [iTerm2](#iterm2) - macOS terminal emulator
-- [Kitty](#kitty) - Cross-platform GPU terminal
-
-#### **Terminal Tools**
-- [tmux](#tmux) - Terminal multiplexer with status bar theming
-- [Zellij](#zellij) - Modern terminal multiplexer
-- [Starship](#starship) - Cross-shell prompt configuration
-- [Zsh](#zsh) - Shell theme with Oh-My-Zsh integration
-
-#### **Applications**
-- [Obsidian](#obsidian) - Note-taking and knowledge management
-- [Firefox](#firefox) - Web browser interface theming
-
-#### **Package Management**
-- [Arch Linux](#arch-linux) - AUR package for easy installation
-
-### 🔄 Coming Soon
-- Hyper - Terminal emulator
-- Emacs - Text editor
-- Chrome - Web browser extension
-- Rofi - Application launcher
-- i3/Sway - Window managers
-- Dunst - Notification daemon
-
-## 📦 Installation
-
-### Quick Start (Recommended)
-
-The easiest way to install Midnight Moss themes across your entire system:
-
-```bash
-# Clone the repository
-git clone https://github.com/babywizzies/midnight-moss-theme.git
-cd midnight-moss-theme
-
-# Run the automated installer
-./install.sh
-
-# Or use make for common installation patterns
-make install              # Interactive installation
-make install-all          # Install everything
-make install-terminals    # Terminal emulators only
-make install-editors      # Code editors only
-make install-tools        # Terminal tools only
-```
-
-For targeted installation:
-```bash
-# Install specific applications
-./install.sh -t alacritty,vim,tmux,neovim
-
-# Or using make
-make install TARGETS=vim,tmux,zsh
-
-# Preview what would be installed (dry-run)
-make test
-```
-
-See [INSTALL.md](INSTALL.md) for comprehensive installation guide, including platform-specific instructions, troubleshooting, and advanced options.
+## Installation
 
 ### Package Managers
 
-#### Homebrew (macOS)
+| Platform | Command |
+|----------|---------|
+| **Homebrew** | `brew tap homunculuslabs/themes && brew install midnight-moss-themes` |
+| **Arch Linux** | `yay -S midnight-moss-themes` |
+| **VS Code** | Search "Midnight Moss" in Extensions |
+| **JetBrains** | Search "Midnight Moss" in Plugins Marketplace |
+
+### Quick Start
+
 ```bash
-brew tap homunculuslabs/themes
-brew install midnight-moss-themes
+git clone https://github.com/HomunculusLabs/midnight-moss-theme.git
+cd midnight-moss-theme
+./install.sh          # Interactive installer
 ```
 
-#### Arch Linux (AUR)
+Or use make targets:
 ```bash
-# Using yay
-yay -S midnight-moss-themes
-
-# Using paru
-paru -S midnight-moss-themes
+make install-all      # Install everything
+make install-terminals # Alacritty, Kitty, iTerm2
+make install-editors   # VS Code, Vim, Neovim, Sublime, JetBrains
+make install-tools     # tmux, Zellij, Zsh, Starship
 ```
 
-#### VS Code Marketplace
-Search "Midnight Moss" in VS Code Extensions, or run:
-```bash
-code --install-extension homunculuslabs.midnight-moss-theme
-```
+See [INSTALL.md](INSTALL.md) for detailed platform-specific instructions.
 
-#### JetBrains Marketplace
-Search "Midnight Moss" in Settings → Plugins → Marketplace
+## Supported Applications
 
-#### Manual Download
-Download individual themes from the [releases page](https://github.com/HomunculusLabs/midnight-moss-theme/releases) or browse the source code.
+### Code Editors & IDEs
+| App | Install |
+|-----|---------|
+| **VS Code** | [Marketplace](https://marketplace.visualstudio.com/) or `./install.sh -t vscode` |
+| **JetBrains** | [Marketplace](https://plugins.jetbrains.com/) or import `jetbrains/midnight-moss.icls` |
+| **Vim** | `./install.sh -t vim` or copy to `~/.vim/colors/` |
+| **Neovim** | `./install.sh -t neovim` or copy to `~/.config/nvim/colors/` |
+| **Sublime Text** | Copy to `~/.config/sublime-text/Packages/User/` |
 
-### Quick Setup
+### Terminal Emulators
+| App | Install |
+|-----|---------|
+| **Alacritty** | `./install.sh -t alacritty` - TOML & YAML formats |
+| **Kitty** | `./install.sh -t kitty` |
+| **iTerm2** | Import `iterm2/midnight-moss.itermcolors` |
 
-#### **Code Editors**
+### Terminal Tools
+| App | Install |
+|-----|---------|
+| **tmux** | `./install.sh -t tmux` |
+| **Zellij** | `./install.sh -t zellij` |
+| **Starship** | `./install.sh -t starship` |
+| **Zsh** | `./install.sh -t zsh` (Oh-My-Zsh compatible) |
 
-**VS Code**
-```bash
-# Download and install manually, or search for "Midnight Moss" in extensions
-# See vscode/README.md for detailed instructions
-```
+### Applications
+| App | Install |
+|-----|---------|
+| **Obsidian** | Copy `obsidian/` to `.obsidian/themes/midnight-moss/` |
+| **Firefox** | Copy `firefox/` to profile `chrome/` folder ([details](firefox/README.md)) |
 
-**Sublime Text**
-```bash
-# Copy to User packages directory
-cp sublime-text/midnight-moss.sublime-color-scheme ~/.config/sublime-text/Packages/User/
-# Select from Preferences → Color Scheme
-```
+## Philosophy
 
-**JetBrains IDEs**
-```bash
-# Import color scheme file
-# Settings → Editor → Color Scheme → Import → midnight-moss.icls
-```
-
-**Vim/Neovim**
-```bash
-mkdir -p ~/.vim/colors
-curl -o ~/.vim/colors/midnight-moss.vim https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/vim/midnight-moss.vim
-# Add to .vimrc: colorscheme midnight-moss
-```
-
-#### **Terminal Emulators**
-
-**Alacritty**
-```bash
-mkdir -p ~/.config/alacritty/themes
-curl -o ~/.config/alacritty/themes/midnight-moss.toml https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/alacritty/midnight-moss.toml
-# Add to alacritty.toml: import = ["~/.config/alacritty/themes/midnight-moss.toml"]
-```
-
-**iTerm2**
-```bash
-curl -o ~/Downloads/midnight-moss.itermcolors https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/iterm2/midnight-moss.itermcolors
-# Double-click to import, then select in Preferences → Profiles → Colors
-```
-
-**Kitty**
-```bash
-curl -o ~/.config/kitty/midnight-moss.conf https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/kitty/midnight-moss.conf
-echo "include midnight-moss.conf" >> ~/.config/kitty/kitty.conf
-```
-
-#### **Terminal Tools**
-
-**tmux**
-```bash
-curl -o ~/.config/tmux/midnight-moss.conf https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/tmux/midnight-moss.conf
-echo "source-file ~/.config/tmux/midnight-moss.conf" >> ~/.tmux.conf
-```
-
-**Zsh (Oh-My-Zsh)**
-```bash
-curl -o ~/.oh-my-zsh/themes/midnight-moss.zsh-theme https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/zsh/midnight-moss.zsh-theme
-# Set ZSH_THEME="midnight-moss" in ~/.zshrc
-```
-
-**Starship**
-```bash
-curl -o ~/.config/starship-midnight-moss.toml https://raw.githubusercontent.com/babywizzies/midnight-moss-theme/main/starship/starship.toml
-# Add configuration to your starship.toml
-```
-
-#### **Applications**
-
-**Obsidian**
-```bash
-# Copy to your vault's themes directory
-# .obsidian/themes/midnight-moss/
-# Enable in Settings → Appearance → Themes
-```
-
-**Firefox**
-```bash
-# Enable custom stylesheets in about:config
-# Copy userChrome.css and userContent.css to profile chrome folder
-# See firefox/README.md for detailed instructions
-```
-
-## 🖼️ Previews
-
-### Obsidian
-*Screenshots coming soon*
-
-### Terminal
-*Screenshots coming soon*
-
-### Code Editor
-*Screenshots coming soon*
-
-## 🎯 Philosophy
-
-Midnight Moss is designed around three core principles:
+Midnight Moss is designed around three principles:
 
 1. **Organic Harmony** - Colors inspired by nature's night palette
-2. **Developer Focus** - Optimized contrast ratios and syntax highlighting
-3. **Visual Calm** - Reduced eye strain for extended use
+2. **Developer Focus** - Optimized contrast for syntax highlighting
+3. **Visual Calm** - Reduced eye strain for extended sessions
 
-The theme uses a sophisticated gradient of grays as the foundation, with carefully selected accent colors that provide excellent readability while maintaining visual interest. The primary accent, a muted teal (`#5e8d87`), evokes the gentle glow of moss in moonlight.
+## Development
 
-## 🛠️ Development
-
-### Core Color Palette
-
-Want to port Midnight Moss to a new application? Here's the core palette:
+### Porting to New Applications
 
 ```css
 :root {
@@ -247,61 +125,54 @@ Want to port Midnight Moss to a new application? Here's the core palette:
   --mm-bg-secondary: #262626;
   --mm-bg-tertiary: #2e2e2e;
   --mm-text-primary: #b8b8b8;
-  --mm-text-secondary: #7a7a7a;
-  --mm-accent-primary: #5e8d87;
-  --mm-accent-success: #6e8f7c;
-  --mm-accent-info: #5d7e97;
-  --mm-accent-warning: #a09262;
-  --mm-accent-error: #9b6a6c;
+  --mm-text-muted: #7a7a7a;
+  --mm-accent: #5e8d87;
+  --mm-success: #6e8f7c;
+  --mm-info: #5d7e97;
+  --mm-warning: #a09262;
+  --mm-error: #9b6a6c;
+  --mm-keyword: #826d94;
 }
 ```
 
 ### Repository Structure
 
-- `/alacritty/` - Alacritty terminal themes (TOML & YAML)
-- `/arch-package/` - AUR package files
-- `/dotfiles/` - Automated installation and management scripts
-- `/firefox/` - Firefox userChrome themes
-- `/iterm2/` - iTerm2 color schemes
-- `/jetbrains/` - JetBrains IDE themes
-- `/kitty/` - Kitty terminal configuration
-- `/neovim/` - Neovim Lua colorscheme
-- `/obsidian/` - Obsidian theme
-- `/starship/` - Starship prompt configuration
-- `/sublime-text/` - Sublime Text color scheme
-- `/tmux/` - tmux configuration theme
-- `/vim/` - Vim colorscheme
-- `/vscode/` - VS Code theme
-- `/zellij/` - Zellij multiplexer theme
-- `/zsh/` - Zsh/Oh-My-Zsh theme
+```
+midnight-moss-theme/
+├── alacritty/      # Terminal (TOML & YAML)
+├── arch-package/   # AUR PKGBUILD
+├── dotfiles/       # Install/uninstall scripts
+├── firefox/        # userChrome.css
+├── homebrew/       # Homebrew formula
+├── iterm2/         # macOS terminal
+├── jetbrains/      # IntelliJ, PyCharm, etc.
+├── kitty/          # Terminal
+├── neovim/         # Lua colorscheme
+├── obsidian/       # Note-taking app
+├── starship/       # Cross-shell prompt
+├── sublime-text/   # Editor
+├── tmux/           # Multiplexer
+├── vim/            # Classic colorscheme
+├── vscode/         # Editor extension
+├── zellij/         # Multiplexer
+└── zsh/            # Shell theme
+```
 
-### Automated Installation
+## Contributing
 
-The `dotfiles/` directory contains installation scripts:
-- `install.sh` - Automated theme installer with backup support
-- `uninstall.sh` - Theme removal and backup restoration
-- See `dotfiles/README.md` for detailed documentation
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## 🤝 Contributing
-
-We welcome contributions! Whether you want to:
-- Port the theme to a new application
+- Port the theme to new applications
 - Improve existing implementations
 - Report bugs or suggest improvements
-- Add documentation or screenshots
+- Add screenshots
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## License
 
-## 📜 License
-
-This theme is released under the MIT License. See [LICENSE](LICENSE) for details.
-
-## 🙏 Credits
-
-Originally created as a terminal rice configuration, Midnight Moss represents the evolution of a personal color scheme into a comprehensive theme ecosystem.
+MIT License - See [LICENSE](LICENSE) for details.
 
 ---
 
-**Enjoy coding in the dark with Midnight Moss! 🌙🌿**
+**Enjoy coding in the dark with Midnight Moss!**
 
-*If you love this theme, please ⭐ star the repository and share it with fellow developers!*
+[Star this repo](https://github.com/HomunculusLabs/midnight-moss-theme) if you find it useful!
