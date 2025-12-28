@@ -26,6 +26,7 @@ FORCE=false
 # Installation targets (enabled by default)
 declare -A INSTALL_TARGETS=(
     [alacritty]=true
+    [ghostty]=true
     [kitty]=true
     [iterm2]=false  # macOS only
     [vim]=true
@@ -34,6 +35,7 @@ declare -A INSTALL_TARGETS=(
     [zellij]=true
     [zsh]=true
     [starship]=true
+    [omarchy]=true  # Omarchy theme system
     [vscode]=false  # Manual installation recommended
     [sublime]=false # Manual installation recommended
     [jetbrains]=false # Manual installation recommended
@@ -128,6 +130,23 @@ install_alacritty() {
         install_file "$THEME_DIR/alacritty/midnight-moss.yml" "$config_dir/midnight-moss.yml"
         print_info "Merge colors section into your alacritty.yml"
     fi
+}
+
+install_ghostty() {
+    if ! command_exists ghostty; then
+        print_warning "Ghostty not found, skipping..."
+        return
+    fi
+
+    print_header "Installing Ghostty Theme"
+
+    local config_dir="$HOME/.config/ghostty"
+    local theme_dir="$config_dir/themes"
+
+    mkdir -p "$theme_dir"
+
+    install_file "$THEME_DIR/ghostty/midnight-moss.conf" "$theme_dir/midnight-moss"
+    print_info "Add to config: theme = midnight-moss"
 }
 
 install_kitty() {
@@ -250,6 +269,46 @@ install_starship() {
     else
         install_file "$THEME_DIR/starship/starship.toml" "$config_file"
     fi
+}
+
+install_omarchy() {
+    local omarchy_themes_dir="$HOME/.config/omarchy/themes"
+
+    # Check if omarchy themes directory exists
+    if [ ! -d "$omarchy_themes_dir" ]; then
+        print_warning "Omarchy themes directory not found, skipping..."
+        print_info "Install omarchy first: https://github.com/basecamp/omakub"
+        return
+    fi
+
+    print_header "Installing Omarchy Theme"
+
+    local theme_dest="$omarchy_themes_dir/midnight-moss"
+    local omarchy_src="$THEME_DIR/midnight-moss"
+
+    # Check if source exists
+    if [ ! -d "$omarchy_src" ]; then
+        print_error "Omarchy theme source not found at $omarchy_src"
+        return
+    fi
+
+    # Backup existing theme if present
+    backup_file "$theme_dest"
+
+    if [ "$DRY_RUN" = true ]; then
+        print_info "[DRY RUN] Would symlink: $omarchy_src → $theme_dest"
+    else
+        # Remove existing if present
+        if [ -e "$theme_dest" ] || [ -L "$theme_dest" ]; then
+            rm -rf "$theme_dest"
+        fi
+
+        # Create symlink to omarchy directory
+        ln -sf "$omarchy_src" "$theme_dest"
+        print_success "Symlinked: $theme_dest"
+    fi
+
+    print_info "Apply with: omarchy-theme-set midnight-moss"
 }
 
 # Usage information
